@@ -49,7 +49,7 @@ happyMonkey.say("How are you doing?", 2000)
 pause(2000)
 normalMonkey.say("I'm doing ok", 1000)
 pause(2000)
-normalMonkey.say("What makes you so happy today?", 2000)
+normalMonkey.say("What makes you so happy?", 2000)
 pause(2000)
 happyMonkey.say("I found a forest full of bananas!!!", 2000)
 pause(2000)
@@ -61,26 +61,6 @@ normalMonkey.say("Yes!", 1000)
 pause(2000)
 happyMonkey.say("Ok, take some.", 1000)
 pause(2000)
-normalMonkey.say("Thank you!!!", 1000)
-let banana = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . f . . . . . . . . . . . . . 
-    . . f 5 5 . . . . . . . . . . . 
-    . . 5 5 5 5 5 . . . . . . . . . 
-    . . . 5 5 5 5 5 5 . . . . . . . 
-    . . . . 5 5 5 5 5 5 . . . . . . 
-    . . . . . . 5 5 5 5 5 . . . . . 
-    . . . . . . . 5 5 5 5 5 5 . . . 
-    . . . . . . . . . 5 5 5 5 5 . . 
-    . . . . . . . . . . 5 5 5 5 . . 
-    . . . . . . . . . . . . 5 f . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    `, SpriteKind.Player)
-banana.setPosition(60, 60)
 normalMonkey.destroy()
 let happyMonkey2 = sprites.create(img`
     . . . . . f f f f f . . . . . . 
@@ -108,3 +88,47 @@ true
 )
 happyMonkey2.setPosition(50, 50)
 happyMonkey2.say(":DDD", 5000)
+let banana = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . f . . . . . . . . . . . . . 
+    . . f 5 5 . . . . . . . . . . . 
+    . . 5 5 5 5 5 . . . . . . . . . 
+    . . . 5 5 5 5 5 5 . . . . . . . 
+    . . . . 5 5 5 5 5 5 . . . . . . 
+    . . . . . . 5 5 5 5 5 . . . . . 
+    . . . . . . . 5 5 5 5 5 5 . . . 
+    . . . . . . . . . 5 5 5 5 5 . . 
+    . . . . . . . . . . 5 5 5 5 . . 
+    . . . . . . . . . . . . 5 f . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, SpriteKind.Projectile)
+let banana2 = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . f . . . . . . . . . . . . . 
+    . . f 5 5 . . . . . . . . . . . 
+    . . 5 5 5 5 5 . . . . . . . . . 
+    . . . 5 5 5 5 5 5 . . . . . . . 
+    . . . . 5 5 5 5 5 5 . . . . . . 
+    . . . . . . 5 5 5 5 5 . . . . . 
+    . . . . . . . 5 5 5 5 5 5 . . . 
+    . . . . . . . . . 5 5 5 5 5 . . 
+    . . . . . . . . . . 5 5 5 5 . . 
+    . . . . . . . . . . . . 5 f . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, SpriteKind.Projectile)
+for (let index = 0; index < 30; index++) {
+    banana.setPosition(10, 0)
+    banana.setVelocity(50, 50)
+    pause(1000)
+    banana2.setPosition(0, 0)
+    banana2.setVelocity(50, 50)
+    pause(1000)
+}
